@@ -1,0 +1,20 @@
+<h1>Delete Post</h1>
+
+<p>
+  <b>Name:</b>
+  <%= @post.name %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @post.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @post.content %>
+</p>
+
+
+<%= link_to("Delete Post", @post, :method => :destroy) %>
+<%= link_to 'Back', posts_path %>
