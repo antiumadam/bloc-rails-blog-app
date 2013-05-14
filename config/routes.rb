@@ -1,4 +1,6 @@
 BlogApp::Application.routes.draw do
-  resources :posts
+  resources :authors
 
+  resources :posts
+  root :to => 'posts#index'
 end
