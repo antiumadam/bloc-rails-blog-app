@@ -1,4 +1,6 @@
 BlogApp::Application.routes.draw do
+  resources :comments
+
   resources :authors
 
   resources :posts

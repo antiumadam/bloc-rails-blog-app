@@ -11,22 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130514042359) do
+ActiveRecord::Schema.define(:version => 20130515044454) do
 
   create_table "authors", :force => true do |t|
     t.string   "name"
     t.string   "email"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "password"
+    t.text     "bio"
+    t.string   "website"
+    t.string   "twitter"
   end
 
-  create_table "posts", :force => true do |t|
+  create_table "comments", :force => true do |t|
     t.string   "name"
-    t.string   "title"
+    t.string   "email"
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "post_id"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
     t.integer  "author_id"
+    t.text     "body"
+    t.datetime "published_date"
   end
 
 end
