@@ -1,5 +1,5 @@
 class Author < ActiveRecord::Base
-  attr_accessible :email, :name, :password, :bio, :website, :twitter 
+  attr_accessible :name, :password, :email, :bio, :website, :twitter 
   
   has_many :posts
 end

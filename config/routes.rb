@@ -1,8 +1,8 @@
 BlogApp::Application.routes.draw do
-  resources :comments
-
-  resources :authors
-
-  resources :posts
   root :to => 'posts#index'
+  
+  resources :authors
+  resources :posts do
+   resources :comments
+  end 
 end
