@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BlogApp</title>
+  <title>Adam's Blog</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  	<header class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="navbar-inner">
+		<div class ="container">
+	    <a class="brand" <%= link_to "Adam's Blog", root_path %></a>
+	    <ul class="nav">
+	      <li class="active"><%= link_to "Posts", posts_path %></li>
+	    </ul>
+	    </div>
+	  </div>	
+	</header>
+	<div class="container">
+      <%= yield %>
+    </div>
 </body>
 </html>
